@@ -1,19 +1,18 @@
 import React from "react";
+import { Outlet } from "react-router";
 
 interface ILayout {
   children?: React.ReactNode;
 }
 
-const Layout: React.FC<ILayout> = (props) => {
+const Layout: React.FC<ILayout> = ({ children }) => {
   return (
-    <div>
-      {/* Add whatever layout components you want to surround the children with */}
-      <header>Header</header>
-      <main>
-        {props.children} {/* Render props.children here */}
-      </main>
-      <footer>Footer</footer>
-    </div>
+    <>
+      <div>
+        <Outlet />
+        {children}
+      </div>
+    </>
   );
 };
 
