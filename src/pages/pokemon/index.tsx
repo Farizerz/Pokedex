@@ -1,7 +1,12 @@
 import React from "react";
+import PkmnType from "@atoms/pkmn-type";
 
 const Pokemon: React.FC = () => {
-  return <div>Pokemon</div>;
+  return (
+    <div>
+      <PkmnType />
+    </div>
+  );
 };
 
 export default Pokemon;
